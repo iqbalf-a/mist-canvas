@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mist Canvas</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- Hidden camera feed — only used as texture source -->
+    <video id="video" autoplay playsinline muted></video>
+
+    <!-- Layer 1: dark blurred camera background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Layer 2: the condensation / fog pane -->
+    <canvas id="fog-canvas"></canvas>
+
+    <!-- Loading overlay -->
+    <div id="loading">
+      <div class="spinner"></div>
+      <p id="loading-text">Memulai Embun…</p>
+    </div>
+
+    <!-- HUD -->
+    <div id="ui">
+      <div id="breath-indicator">
+        <div id="breath-dot"></div>
+        <span id="breath-label">Hembuskan napas ke kamera</span>
+      </div>
+      <button id="reset-btn" title="Reset (R)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+          <path d="M3 3v5h5"/>
+        </svg>
+        Reset
+      </button>
+    </div>
+
+    <!-- First-run hint (auto-fades after 6 s) -->
+    <div id="hint">
+      <p>Buka mulut &rarr; embun terbentuk</p>
+      <p>Gerakkan telunjuk &rarr; gambar di embun</p>
+      <p>Tombol R / Reset &rarr; hapus semua</p>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
