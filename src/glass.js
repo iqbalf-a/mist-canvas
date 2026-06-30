@@ -78,8 +78,8 @@ export class GlassEffect {
 
   breathe(cx, cy, intensity) {
     const ctx    = this._mCtx;
-    const radius = 170 + intensity * 120;
-    const alpha  = intensity * 0.30;
+    const radius = 220 + intensity * 150;
+    const alpha  = intensity * 0.52;
 
     ctx.save();
     ctx.globalCompositeOperation = 'source-over';

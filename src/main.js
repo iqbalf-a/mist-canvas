@@ -11,7 +11,7 @@ import { initLandmarkers, detectFace, detectHand } from './tracking.js';
 import { GlassEffect }                             from './glass.js';
 import { setupUI }                                 from './ui.js';
 
-const JAW_THRESHOLD  = 0.2;
+const JAW_THRESHOLD  = 0.1;
 const LERP           = 0.22;
 
 async function main() {
